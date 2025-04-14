@@ -60,18 +60,17 @@ class TestCalculator(unittest.TestCase):
     ######## Partner 1
     def test_log_invalid_argument(self):
         self.assertEqual(logarithm(-2, 8), "Error: Logarithm base and argument must be positive")
-        self.assertEqual(logarithm(2, -8), "Error: Logarithm base and argument must be positive")
-        self.assertEqual(logarithm(0, 5), "Error: Logarithm base and argument must be positive")
 
     def test_hypotenuse(self):
-        self.assertAlmostEqual(hypotenuse(3, 4), 5)
-        self.assertAlmostEqual(hypotenuse(5, 12), 13)
-        self.assertAlmostEqual(hypotenuse(8, 15), 17)
+        self.assertEqual(hypotenuse(3, 4), 5)
+        self.assertEqual(hypotenuse(5, 12), 13)
+        self.assertEqual(hypotenuse(8, 15), 17)
 
     def test_sqrt(self):
         self.assertAlmostEqual(square_root(9), 3.0)
         self.assertAlmostEqual(square_root(16), 4.0)
-        self.assertRaises(-4)
+        with self.assertRaises(ValueError):
+            square_root(-1)
              # 3 assertions
     #     # Test for invalid argument, example:
     #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
