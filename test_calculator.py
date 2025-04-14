@@ -52,13 +52,20 @@ class TestCalculator(unittest.TestCase):
 
     def test_log_invalid_base(self): # 1 assertion
         with self.assertRaises(ValueError):
-            logarithm(-1, 5)
+            logarithm(0, 10)
+        with self.assertRaises(ValueError):
+            logarithm(-2, 10)
     #     # use same technique from test_divide_by_zero
     #     fill in code
     # ##########################
     
     ######## Partner 1
     def test_log_invalid_argument(self):
+<<<<<<< HEAD
+        with self.asserRaises(ValueError):
+            logartithm(0, 10)
+        with self.assertRaises(ValueError):
+            logarithm(2, -8)
         self.assertEqual(logarithm(-2, 8), "Error: Logarithm base and argument must be positive")
 
     def test_hypotenuse(self):
