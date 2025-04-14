@@ -15,11 +15,11 @@ class TestCalculator(unittest.TestCase):
     #     fill in code
 
     def test_subtract(self): # 3 assertions
-        self.assertEqual(sub(5, 3), 2)
+        self.assertEqual(subtract(5, 3), 2)
 
-        self.assertEqual(sub(-1, -1), 0)
+        self.assertEqual(subtract(-1, -1), 0)
 
-        self.assertEqual(sub(0, 5), -5)
+        self.assertEqual(subtract(0, 5), -5)
     #     fill in code
     # ##########################
 
@@ -44,24 +44,24 @@ class TestCalculator(unittest.TestCase):
     #     fill in code
 
     def test_logarithm(self): # 3 assertions
-        self.assertAlmostEqual(log(2, 8), 3)
+        self.assertAlmostEqual(logarithm(2, 8), 3)
 
-        self.assertAlmostEqual(log(10, 100), 2)
+        self.assertAlmostEqual(logarithm(10, 100), 2)
 
-        self.assertAlmostEqual(log(math.e, math.e), 1)
+        self.assertAlmostEqual(logarithm(math.e, math.e), 1)
 
     def test_log_invalid_base(self): # 1 assertion
         with self.assertRaises(ValueError):
-            log(-1, 5)
+            logarithm(-1, 5)
     #     # use same technique from test_divide_by_zero
     #     fill in code
     # ##########################
     
     ######## Partner 1
     def test_log_invalid_argument(self):
-        self.assertEqual(log(-2, 8), "Error: Logarithm base and argument must be positive")
-        self.assertEqual(log(2, -8), "Error: Logarithm base and argument must be positive")
-        self.assertEqual(log(0, 5), "Error: Logarithm base and argument must be positive")
+        self.assertEqual(logarithm(-2, 8), "Error: Logarithm base and argument must be positive")
+        self.assertEqual(logarithm(2, -8), "Error: Logarithm base and argument must be positive")
+        self.assertEqual(logarithm(0, 5), "Error: Logarithm base and argument must be positive")
 
     def test_hypotenuse(self):
         self.assertAlmostEqual(hypotenuse(3, 4), 5.0)
