@@ -33,10 +33,10 @@ def div(a, b):
 
 def logarithm(b, a):
     if b <= 0:
-        raise ValueError("Base must be greater than 0")
+        raise ValueError("Base (b) must be greater than 0")
     if a <= 0:
-        raise ValueError("Argument must be greater than 0")
-    return math.log(argument, base)
+        raise ValueError("Argument (a) must be greater than 0")
+    return math.log(a, b)
 
 def exp(a, b):
     return a ** b
