@@ -36,7 +36,7 @@ def logarithm(b, a):
         raise ValueError("Base must be greater than 0")
     if a <= 0:
         raise ValueError("Argument must be greater than 0")
-    return math.log(argument, base)
+    return math.log(a, b)
 
 def exp(a, b):
     return a ** b
