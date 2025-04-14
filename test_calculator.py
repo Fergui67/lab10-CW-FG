@@ -61,9 +61,8 @@ class TestCalculator(unittest.TestCase):
     
     ######## Partner 1
     def test_log_invalid_argument(self):
-<<<<<<< HEAD
-        with self.asserRaises(ValueError):
-            logartithm(0, 10)
+        with self.assertRaises(ValueError):
+            logarithm(0, 10)
         with self.assertRaises(ValueError):
             logarithm(2, -8)
         self.assertEqual(logarithm(-2, 8), "Error: Logarithm base and argument must be positive")
