@@ -64,9 +64,9 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(logarithm(0, 5), "Error: Logarithm base and argument must be positive")
 
     def test_hypotenuse(self):
-        self.assertAlmostEqual(hypotenuse(3, 4), 5.0)
-        self.assertAlmostEqual(hypotenuse(5, 12), 13.0)
-        self.assertAlmostEqual(hypotenuse(8, 15), 17.0)
+        self.assertAlmostEqual(hypotenuse(3, 4), 5)
+        self.assertAlmostEqual(hypotenuse(5, 12), 13)
+        self.assertAlmostEqual(hypotenuse(8, 15), 17)
 
     def test_sqrt(self):
         self.assertAlmostEqual(square_root(9), 3.0)
