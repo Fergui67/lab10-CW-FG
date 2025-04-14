@@ -31,10 +31,12 @@ def div(a, b):
         return "Error: Division by zero"
     return a / b
 
-def logarithm(a, b):
-    if a <= 0 or b <= 0:
-        return "Error: Logarithm base and argument must be positive."
-    return math.log(b, a)
+def logarithm(b, a):
+    if b <= 0:
+        raise ValueError("Base must be greater than 0")
+    if a <= 0:
+        raise ValueError("Argument must be greater than 0")
+    return math.log(argument, base)
 
 def exp(a, b):
     return a ** b
