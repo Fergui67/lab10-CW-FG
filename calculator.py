@@ -1,3 +1,6 @@
+# # https://github.com/Fergui67/lab10-CW-FG.git
+# Partner 1: Fernando Guillen
+# Partner 2: Cade Wedekind
 """
 calculator.py
 - Defines functions used to create a simple calculator
@@ -17,7 +20,7 @@ def hypotenuse(a,b):
 def add(a, b): 
     return a + b
 
-def sub(a, b):
+def subtract(a, b):
     return a - b
 
 def mul(a, b):
@@ -28,9 +31,9 @@ def div(a, b):
         return "Error: Division by zero"
     return a / b
 
-def log(a, b):
+def logarithm(a, b):
     if a <= 0 or b <= 0:
-        return "Error: Logarithm base and argument must be positive"
+        return "Error: Logarithm base and argument must be positive."
     return math.log(b, a)
 
 def exp(a, b):
