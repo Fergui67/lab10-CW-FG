@@ -1,5 +1,8 @@
+# https://github.com/Fergui67/lab10-CW-FG.git
 import unittest
 from calculator import *
+# Partner 1: Fernando Guillen.
+# Partner 2: Cade Wedekind
 
 class TestCalculator(unittest.TestCase):
     ######### Partner 2
