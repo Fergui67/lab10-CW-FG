@@ -15,11 +15,11 @@ class TestCalculator(unittest.TestCase):
     #     fill in code
 
     def test_subtract(self): # 3 assertions
-        self.assertEqual(sub(5, 3), 2)
+        self.assertEqual(subtract(5, 3), 2)
 
-        self.assertEqual(sub(-1, -1), 0)
+        self.assertEqual(subtract(-1, -1), 0)
 
-        self.assertEqual(sub(0, 5), -5)
+        self.assertEqual(subtract(0, 5), -5)
     #     fill in code
     # ##########################
 
