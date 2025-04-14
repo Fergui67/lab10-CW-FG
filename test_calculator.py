@@ -38,6 +38,9 @@ class TestCalculator(unittest.TestCase):
     def test_divide_by_zero(self): # 1 assertion
         with self.assertEqual(div(5, 0), "Error: Division by zero"):
 
+    def test_divide_by_zero(self):
+        with self.assertRaises(ValueError):
+            div(0, 5)
     #     # call division function inside, example:
     #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
     #     #     div(0, 5)
@@ -62,10 +65,12 @@ class TestCalculator(unittest.TestCase):
     ######## Partner 1
     def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):
+            logarithm(2, 0)
+        with self.assertRaises(ValueError):
             logarithm(2, -8)
-        self.assertEqual(logarithm(-2, 8), "Error: Logarithm base and argument must be positive")
-
-
+        with self.assertRaises(ValueError):  # Fixed incorrect assertion
+            logarithm(-2, 8)
+            
     def test_hypotenuse(self):
         self.assertEqual(hypotenuse(3, 4), 5)
         self.assertEqual(hypotenuse(5, 12), 13)
