@@ -35,9 +35,9 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(div(4, 0), "Error: Division by zero")
 
     ######## Partner 2
-    def test_divide_by_zero(self): # 1 assertion
-        with self.assertRaises(ZeroDivisionError):
-            div(5, 0)
+    def test_divide_by_zero(self):
+        with self.assertRaises(ValueError):
+            div(0, 5)
     #     # call division function inside, example:
     #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
     #     #     div(0, 5)
