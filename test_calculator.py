@@ -32,11 +32,12 @@ class TestCalculator(unittest.TestCase):
     def test_divide(self):
         self.assertEqual(div(10, 2), 5)
         self.assertEqual(div(5, 2), 2.5)
-        self.assertEqual(div(4, 0), "Error: Division by zero")
+        with self.asserRaises(ValueError):
+            div(5, 0)
 
     ######## Partner 2
     def test_divide_by_zero(self): # 1 assertion
-        with self.assertRaises(ZeroDivisionError):
+        with self.assertRaises(ValueError):
             div(5, 0)
 
     #     # call division function inside, example:
