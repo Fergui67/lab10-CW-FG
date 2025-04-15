@@ -32,7 +32,7 @@ class TestCalculator(unittest.TestCase):
     def test_divide(self):
         self.assertEqual(div(10, 2), 5)
         self.assertEqual(div(5, 2), 2.5)
-        with self.asserRaises(ValueError):
+        with self.assertRaises(ValueError):
             div(5, 0)
 
     ######## Partner 2
