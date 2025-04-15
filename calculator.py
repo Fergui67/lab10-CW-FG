@@ -28,7 +28,7 @@ def mul(a, b):
 
 def div(a, b):
     if b == 0:
-        return ZeroDivisionError("Error: Division by zero")
+        return ValueError("Error: Division by zero")
     return a / b
 
 def logarithm(b, a):
